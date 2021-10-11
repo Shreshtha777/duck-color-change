@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            text-align: center;
+            padding: 30px;
+            background-color: red;;
+            height: 800px;
+            width: 100%;
+        }
+      h1{
+        font-family: 'Brush Script MT', cursive;
+        color: aliceblue;
+       font-size: 50px;
+      }
+      img{
+          height: 25em;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+      <h1>Programing is fun🐱</h1>
+      <img src="quack-duck.gif">
+        <p id="result"></p>
+        <p id="color-code"></p>
+          
+    </div>
+    
+</body>
+<script>
+   
+   setInterval(display, 1000);
+   
+function display(){
+
+   var c=random_bg_color();
+    document.getElementById('wrapper').style.backgroundColor  =c;
+    document.getElementById('color-code').innerHTML=c;
+
+    
+    
+}
+
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = 100+ Math.floor(Math.random() * 256);
+    var z = 50+ Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ 	
+    return bgColor;
+    
+    }
+
+</script>
+</html>
